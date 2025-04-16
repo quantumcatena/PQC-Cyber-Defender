@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rapport PQC — 932CAB82D205</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#0a0e1a;color:#e2e8f0;line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:2rem}
+.header{background:linear-gradient(135deg,#1a1f35,#0f172a);border:1px solid #2d3748;
+         border-radius:12px;padding:2rem;margin-bottom:2rem;
+         display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.7rem;font-weight:900;color:#63b3ed}
+.logo span{color:#48bb78}
+.score-circle{text-align:center;background:#1a1f35;border:2px solid #38a169;
+              border-radius:50%;width:110px;height:110px;display:flex;
+              flex-direction:column;align-items:center;justify-content:center}
+.score-num{font-size:2rem;font-weight:900;color:#38a169}
+.card{background:#1a1f35;border:1px solid #2d3748;border-radius:10px;padding:1.5rem;margin-bottom:1.5rem}
+h2{color:#63b3ed;font-size:1.2rem;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid #2d3748}
+table{width:100%;border-collapse:collapse}
+th{background:#2d3748;color:#a0aec0;padding:.6rem 1rem;text-align:left;font-size:.85rem}
+td{padding:.7rem 1rem;border-bottom:1px solid #2d3748;font-size:.9rem}
+.grade{padding:.2rem .5rem;border-radius:4px;color:#fff;font-weight:bold}
+.badge{padding:.15rem .5rem;border-radius:4px;color:#fff;font-size:.75rem;font-weight:bold}
+.rec-card{background:#0f172a;border:1px solid #2d3748;border-radius:8px;padding:1rem;margin-bottom:.8rem}
+.exec{background:#0f172a;border-left:4px solid #63b3ed;padding:1rem 1.5rem;
+       border-radius:0 8px 8px 0;font-size:.95rem;color:#cbd5e0}
+.foot{text-align:center;color:#4a5568;font-size:.8rem;margin-top:2rem;padding-top:1rem;border-top:1px solid #2d3748}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="header">
+  <div>
+    <div class="logo">🛡️ PQC Cyber<span>Defender</span></div>
+    <div style="color:#a0aec0;margin-top:.3rem">Rapport d'évaluation sécurité post-quantique</div>
+    <div style="color:#4a5568;font-size:.85rem;margin-top:.3rem">Session : 932CAB82D205 | 2026-03-18 14:24:48 UTC</div>
+  </div>
+  <div class="score-circle">
+    <div class="score-num">98</div>
+    <div style="font-size:.7rem;color:#a0aec0">SCORE</div>
+    <div style="font-weight:bold;color:#38a169">A+</div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Synthèse exécutive</h2>
+  <div class="exec">Évaluation de 3 algorithme(s) PQC sur 5 vecteurs d'attaque. Score global : 97.8/100 (Grade A+). Meilleur algorithme : Kyber-1024 (99.8/100). Les algorithmes PQC évalués résistent aux attaques HNDL — menace principale justifiant la migration per ANSSI et NIST SP 800-227. 1 recommandation(s) critique(s) et 2 haute(s) priorité identifiées.</div>
+</div>
+
+<div class="card">
+  <h2>Matrice de sécurité par algorithme</h2>
+  <table>
+    <thead><tr><th>Algorithme</th><th>Niveau NIST</th><th>Score /100</th><th>Grade</th><th>Points forts</th><th>Points faibles</th></tr></thead>
+    <tbody><tr>
+            <td><strong>Kyber-768</strong></td>
+            <td>Cat. 3</td>
+            <td style="color:#38a169;font-weight:bold;font-size:1.1em">95.2</td>
+            <td><span class="grade" style="background:#38a169">A+</span></td>
+            <td><small>✅ Résiste à Man-in-the-Middle<br>✅ Résiste à Ciphertext Fuzzing<br>✅ Résiste à Harvest-Now-Decrypt-Later</small></td>
+            <td><small>⚠️ Exposition partielle : Traffic Interception<br>⚠️ Exposition partielle : Timing Side-Channel</small></td>
+        </tr><tr>
+            <td><strong>Kyber-1024</strong></td>
+            <td>Cat. 5</td>
+            <td style="color:#38a169;font-weight:bold;font-size:1.1em">99.8</td>
+            <td><span class="grade" style="background:#38a169">A+</span></td>
+            <td><small>✅ Résiste à Man-in-the-Middle<br>✅ Résiste à Ciphertext Fuzzing<br>✅ Résiste à Harvest-Now-Decrypt-Later</small></td>
+            <td><small>⚠️ Exposition partielle : Traffic Interception<br>⚠️ Exposition partielle : Timing Side-Channel</small></td>
+        </tr><tr>
+            <td><strong>FrodoKEM-976</strong></td>
+            <td>Cat. 3</td>
+            <td style="color:#38a169;font-weight:bold;font-size:1.1em">98.3</td>
+            <td><span class="grade" style="background:#38a169">A+</span></td>
+            <td><small>✅ Résiste à Man-in-the-Middle<br>✅ Résiste à Ciphertext Fuzzing<br>✅ Résiste à Harvest-Now-Decrypt-Later</small></td>
+            <td><small>⚠️ Exposition partielle : Traffic Interception</small></td>
+        </tr></tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>Recommandations priorisées</h2>
+  <div class="rec-card">
+            <div style="border-left:4px solid #e53e3e;padding-left:.8rem;margin-bottom:.5rem">
+                <span class="badge" style="background:#e53e3e">CRITICAL</span>
+                <span style="color:#a0aec0;font-size:.8rem;margin:0 .4rem">REC-001</span>
+                <strong>Migrer vers ML-KEM (NIST FIPS 203) pour tous les échanges de clés</strong>
+            </div>
+            <p>Tout échange classique (RSA, ECDH) est vulnérable aux attaques HNDL. Déployer ML-KEM-768 (Kyber-768) en priorité pour les données dont l'horizon de sensibilité dépasse 5 ans. La jurisprudence CNIL (Dedalus 2022, CEGEDIM 2023) confirme la responsabilité des opérateurs en cas de chiffrement insuffisant.</p>
+            <div style="display:flex;gap:1.5rem;font-size:.8rem;color:#a0aec0;margin-top:.4rem">
+                <span>📋 NIST FIPS 203, ANSSI Avis Technique 2024</span>
+                <span>🔧 ÉLEVÉ</span>
+                <span>📉 95%</span>
+            </div>
+        </div><div class="rec-card">
+            <div style="border-left:4px solid #dd6b20;padding-left:.8rem;margin-bottom:.5rem">
+                <span class="badge" style="background:#dd6b20">HIGH</span>
+                <span style="color:#a0aec0;font-size:.8rem;margin:0 .4rem">REC-002</span>
+                <strong>Déploiement hybride PQC+classique pendant la transition (RFC 9261)</strong>
+            </div>
+            <p>Combiner ML-KEM-768 avec X25519 (X25519Kyber768Draft00) pour protéger simultanément contre les adversaires classiques et quantiques. Recommandé par l'ANSSI pendant la fenêtre de migration.</p>
+            <div style="display:flex;gap:1.5rem;font-size:.8rem;color:#a0aec0;margin-top:.4rem">
+                <span>📋 RFC 9261, IETF TLS 1.3 + PQC</span>
+                <span>🔧 MOYEN</span>
+                <span>📉 80%</span>
+            </div>
+        </div><div class="rec-card">
+            <div style="border-left:4px solid #dd6b20;padding-left:.8rem;margin-bottom:.5rem">
+                <span class="badge" style="background:#dd6b20">HIGH</span>
+                <span style="color:#a0aec0;font-size:.8rem;margin:0 .4rem">REC-003</span>
+                <strong>Déployer ML-DSA-65 (Dilithium-3) pour signatures et PKI</strong>
+            </div>
+            <p>Remplacer les certificats RSA-2048/ECDSA par ML-DSA-65 (FIPS 204) pour empêcher les attaques de substitution de clé. Mettre à jour l'infrastructure CA per draft-ietf-lamps-dilithium-certificates.</p>
+            <div style="display:flex;gap:1.5rem;font-size:.8rem;color:#a0aec0;margin-top:.4rem">
+                <span>📋 NIST FIPS 204, IETF LAMPS WG</span>
+                <span>🔧 ÉLEVÉ</span>
+                <span>📉 70%</span>
+            </div>
+        </div><div class="rec-card">
+            <div style="border-left:4px solid #d69e2e;padding-left:.8rem;margin-bottom:.5rem">
+                <span class="badge" style="background:#d69e2e">MEDIUM</span>
+                <span style="color:#a0aec0;font-size:.8rem;margin:0 .4rem">REC-004</span>
+                <strong>Renforcer l'AEAD avec construction résistante au nonce-reuse</strong>
+            </div>
+            <p>Envisager AES-256-GCM-SIV (RFC 8452) ou AEGIS-256 pour éliminer les vulnérabilités liées à la réutilisation de nonce en production.</p>
+            <div style="display:flex;gap:1.5rem;font-size:.8rem;color:#a0aec0;margin-top:.4rem">
+                <span>📋 RFC 8452 (AES-GCM-SIV), NIST SP 800-38D</span>
+                <span>🔧 FAIBLE</span>
+                <span>📉 60%</span>
+            </div>
+        </div><div class="rec-card">
+            <div style="border-left:4px solid #d69e2e;padding-left:.8rem;margin-bottom:.5rem">
+                <span class="badge" style="background:#d69e2e">MEDIUM</span>
+                <span style="color:#a0aec0;font-size:.8rem;margin:0 .4rem">REC-005</span>
+                <strong>Padding pour masquer la taille des plaintexts</strong>
+            </div>
+            <p>Les ciphertexts PQC révèlent la taille du plaintext (fuite de taille). Appliquer PKCS#7 ou blocs de taille fixe pour éliminer l'analyse de trafic basée sur la longueur. Critique pour données médicales (RGPD Art. 32).</p>
+            <div style="display:flex;gap:1.5rem;font-size:.8rem;color:#a0aec0;margin-top:.4rem">
+                <span>📋 RFC 8467 (EDNS Padding)</span>
+                <span>🔧 FAIBLE</span>
+                <span>📉 40%</span>
+            </div>
+        </div><div class="rec-card">
+            <div style="border-left:4px solid #d69e2e;padding-left:.8rem;margin-bottom:.5rem">
+                <span class="badge" style="background:#d69e2e">MEDIUM</span>
+                <span style="color:#a0aec0;font-size:.8rem;margin:0 .4rem">REC-006</span>
+                <strong>Utiliser liboqs ou BoringSSL pour des primitives constant-time</strong>
+            </div>
+            <p>Cette implémentation Python n'est pas constant-time. En production : liboqs (Open Quantum Safe), BoringSSL avec Kyber, ou HSM certifié FIPS 140-3.</p>
+            <div style="display:flex;gap:1.5rem;font-size:.8rem;color:#a0aec0;margin-top:.4rem">
+                <span>📋 FIPS 140-3, ANSSI Guide Sécurité des Implémentations</span>
+                <span>🔧 MOYEN</span>
+                <span>📉 50%</span>
+            </div>
+        </div>
+</div>
+
+<div class="card">
+  <h2>Conformité réglementaire</h2>
+  <table>
+    <thead><tr><th>Référentiel</th><th>Statut</th></tr></thead>
+    <tbody><tr><td>NIST FIPS 203 (ML-KEM)</td><td style='color:#38a169;font-weight:bold'>✅ CONFORME</td></tr><tr><td>NIST FIPS 204 (ML-DSA)</td><td style='color:#718096;font-weight:bold'>❌ NON ÉVALUÉ</td></tr><tr><td>ANSSI Avis Technique 2024</td><td style='color:#38a169;font-weight:bold'>✅ CONFORME</td></tr><tr><td>NIS2 Directive Art. 21</td><td style='color:#38a169;font-weight:bold'>✅ CONFORME</td></tr><tr><td>RGPD Art. 32</td><td style='color:#38a169;font-weight:bold'>✅ CONFORME</td></tr></tbody>
+  </table>
+</div>
+
+<div class="foot">
+  PQC Cyber Defender — MIT License | NIST FIPS 203/204 · ANSSI Avis Technique 2024 · BSI TR-02102-1<br>
+  Ref. : article en cours "Responsabilité normative NIS2/RGPD face aux attaques HNDL", CLSR 2026
+</div>
+</div>
+</body>
+</html>
